@@ -1,0 +1,28 @@
+{
+  "name": "boids",
+  "version": "1.0.0",
+  "description": "Simulation of Boids in js",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheUltronultimate/Boids.js.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Boids",
+    "Node",
+    "Simulation"
+  ],
+  "author": "Ultronultimate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheUltronultimate/Boids.js/issues"
+  },
+  "homepage": "https://github.com/TheUltronultimate/Boids.js#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
