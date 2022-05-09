@@ -1,4 +1,14 @@
-import Sceene from "./stolen shit/OriginalCode";
+//import Sceene from "./stolen shit/OriginalCode";
+import { Sceene } from "./renderer.js";
 
-let canvas = new Sceene();
+
+const canvas = new Sceene();
+
+function gameLoop() {
+    canvas.drawBackground;
+    console.log("Refreshing")
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
 
