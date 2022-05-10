@@ -1,19 +1,24 @@
 
 class Sceene  {
     constructor() {
-        let canvas = document.createElement("canvas");
+        const canvas = document.createElement("canvas");
+        this.canvas = canvas
         document.body.appendChild(canvas);
-        window.onload = function() {
-            window.addEventListener('resize',init,false);
-            init();
-            setup();
-            
-        }
+        window.onload = setup();
+        //window.onresize = setup();
+
+       function setup() {
         
-        function setup() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+       }
+               
+
+            
+        
+        
+        
         /*
         class init {
             constructor() {
@@ -27,21 +32,54 @@ class Sceene  {
             return canvas.getContext("2d");
         }
 
-        this.canvas = canvas
+
+
+        
 
 
     }
 
-    drawBackground(canvas) {
-        let ctx = canvas.getContext("2d");
+    
+    drawBackground() {
+        console.log("drawing")
+        let ctx = this.canvas.getContext("2d");
         ctx.beginPath();
         ctx.fillStyle = "blue";
         ctx.width = window.innerWidth;
         ctx.height = window.innerHeight;
         ctx.fillRect(0,0,ctx.width, ctx.height);
         ctx.closePath();
+        console.log("finished drawing")
 
-    }
+
+}
+
+
+     resize() {
+        console.log("Resizing")
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+}
+
+
+/*
+     resize() {
+        window.addEventListener('resize',init,false) 
+        init();
+        setup();
+        //drawBackground();
+
+     
+
+    
+}
+
+    setup() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+}
+*/
+
 } 
 
 
